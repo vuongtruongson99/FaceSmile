@@ -1,6 +1,6 @@
 Flask-Mail
 imutils
-tensorflow
+tensorflow-cpu
 opencv-contrib-python
 flask
 gunicorn
