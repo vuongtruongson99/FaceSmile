@@ -1,0 +1,224 @@
+.section-3 {
+    background-image: url(../images/2nd-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 500ms;
+    padding-top: 120px;
+    /* box-sizing: content-box; */
+    overflow: auto;
+}
+
+.section-3.dark-bg {
+    background-image: url(../images/1st-bg-dark.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 500ms;
+    padding-top: 120px;
+    /* box-sizing: content-box; */
+    overflow: auto;
+}
+
+.section-3 h3 {
+    font-weight: 500;
+    font-size: 45px;
+    color: var(--font);
+}
+
+.section-3 .video {
+    margin-top: 20px;
+}
+
+/* .section-3 .video button {
+    border-radius: 50px;
+    width: 30%;
+    background-color: var(--main-btn);
+} */
+
+.section-3 .buttons a {
+    font-style: normal;
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+.section-3 a.main-btn {
+    background: var(--main-btn);
+    /* box-shadow: var(--box-shadow); */
+    border: 0px;
+    border-radius: 100px;
+    padding: 15px 60px;
+    display: inline-block;
+    margin-top: 20px;
+    background-blend-mode: overlay;
+    position: relative;
+}
+
+.section-3 a.main-btn.dark::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:50px; 
+    padding: 2px;
+    background:linear-gradient(106.21deg, #FE53BB 33.92%, #09FBD3 65.33%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+}
+
+.section-3 .buttons button {
+    font-style: normal;
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+.section-3 button.main-btn {
+    background: var(--main-btn);
+    /* box-shadow: var(--box-shadow); */
+    border: 0px;
+    border-radius: 100px;
+    padding: 15px 60px;
+    display: inline-block;
+    margin-top: 20px;
+    background-blend-mode: overlay;
+    position: relative;
+}
+
+.section-3 button.main-btn.dark::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:50px; 
+    padding: 2px;
+    background:linear-gradient(106.21deg, #FE53BB 33.92%, #09FBD3 65.33%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+
+.section-3 .camera {
+    background-color: var(--bg-section);
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    padding: 20px 20px;
+
+}
+
+.section-3 .predict-video h3 {
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--font);
+}
+
+.section-3 .predict-video .video {
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: var(--bg-section);
+    border-radius: 50px;
+}
+
+.section-3 .predict-video .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-3 .predict-video .emoji {
+    margin: 0.5rem;
+}
+
+.section-3 .predict-video .image {
+    height: 3rem;
+    width: 3rem;
+}
+
+.section-3 .predict-video .status {
+    flex-grow: 3;
+    margin: 0.5rem;
+    color: var(--font)
+}
+
+.predict-video .progress {
+    width: 100%;
+    height: 1rem;
+    margin-top: 0.3rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    background-color: var(--bg-progress);
+}
+
+.predict-video .progress .progress-bar {
+    position: absolute;
+    background-color: #FF7892;
+    height: 1rem;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+
+/* Drop zone */
+.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--font);
+    border: 3px dashed #ccc;
+    border-radius: 30px;
+    background-color: var(--bg-section);
+}
+.drop-zone span {
+    color: #37B9FD
+}
+  
+.drop-zone--over {
+    border-style: solid;
+}
+
+.drop-zone__input {
+    display: none;
+}
+
+.drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+}
+
+.drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+}

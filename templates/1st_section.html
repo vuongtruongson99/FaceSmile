@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Face emotion recognition - Video {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/1st_section.css') }}">
+{% endblock %}
+
+{% block section %}
+    <div class="section-1 vh-100">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-5 left">
+                    <h1 class="display-4">Обнаружение эмоции вашего лица!</h1>
+                    <p>Сайт оснащен нейросетью, с помощью которой можно определить эмоцию человека!</p>
+                    
+                    <div class="buttons">
+                        <a href="{{ url_for('video') }}" class="main-btn">Начать</a>
+                    </div>
+                
+                </div>
+                <div class="col-lg-7 align-self-end">
+                    <img class="right-main img-fluid" src="{{ url_for('static', filename='images/Right Main.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/1st.js') }}"></script>
+{% endblock %}

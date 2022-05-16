@@ -1,0 +1,93 @@
+.section-2 {
+    background-image: url(../images/2nd-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 500ms;
+    padding-top: 120px;
+    overflow: auto;
+}
+
+.section-2.dark-bg {
+    background-image: url(../images/1st-bg-dark.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 500ms;
+    padding-top: 120px;
+    overflow: auto;
+}
+
+.section-2 h2 {
+    font-weight: 500;
+    font-size: 45px;
+    text-align: center;
+    color: var(--font);
+}
+
+.section-2 .video {
+    margin-top: 20px;
+}
+
+.section-2 .camera {
+    background-color: var(--bg-section);
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    padding: 20px 20px;
+    margin-bottom: 60px;
+}
+
+.section-2 .predict-video h3 {
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--font);
+}
+
+.section-2 .predict-video .video {
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: var(--bg-section);
+    border-radius: 50px;
+}
+
+.section-2 .predict-video .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-2 .predict-video .emoji {
+    margin: 0.5rem;
+}
+
+.section-2 .predict-video .image {
+    height: 3rem;
+    width: 3rem;
+}
+
+.section-2 .predict-video .status {
+    flex-grow: 3;
+    margin: 0.5rem;
+    color: var(--font)
+}
+
+.predict-video .progress {
+    width: 100%;
+    height: 1rem;
+    margin-top: 0.3rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    background-color: var(--bg-progress);
+}
+
+.predict-video .progress .progress-bar {
+    position: absolute;
+    background-color: #FF7892;
+    height: 1rem;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}

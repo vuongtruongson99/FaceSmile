@@ -1,0 +1,126 @@
+.section-4 {
+    background-image: url(../images/first-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 500ms;
+    padding-top: 100px;
+    overflow: auto;
+    /* box-sizing:content-box; */
+}
+
+.section-4.dark-bg {
+    background-image: url(../images/1st-bg-dark.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 500ms;
+    padding-top: 100px;
+    overflow: auto;
+}
+
+.section-4 h3 {
+    font-weight: 500;
+    font-size: 45px;
+    text-align: center;
+    color: var(--font);
+    margin-bottom: 20px;
+}
+
+.section-4 .card {
+     /* background: var(--bg-section); */
+    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.section-4 .card.even {
+    background-color: var(--bg-card-even);
+    color: #FFFF;
+}
+
+.section-4 .card.odd {
+    background-color: var(--bg-card-odd);
+}
+
+.section-4 .card.dark::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:50px; 
+    padding: 2px;
+    
+    background:linear-gradient(31.08deg, #FE53BB -2.67%, #4FF5D2 102.93%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+}
+
+.section-4 .profile-picture {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.section-4 .card .info h4 {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+    color: var(--font);
+}
+
+.section-4 .card .info h5 {
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--font);
+}
+
+.section-4 .card .info p {
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--font-p-card);
+    padding: 0 30px;
+}
+
+.section-4 .card .mail {
+    /* background-color: var(--bg-mail); */
+    padding: 9px 45px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFF;
+    display: inline-block;
+    width: fit-content;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.section-4 .card .mail.odd {
+    background-color: var(--bg-mail-odd);
+    background-image: var(--bg-mail-odd);
+}
+
+.section-4 .card .mail.even {
+    background-color: var(--bg-mail-even);
+    background-image: var(--bg-mail-even);
+}
+
+.section-4 .card .social-media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-4 .card.odd .social-media i {
+    color: var(--icon-odd);
+}
+
+.section-4 .card.even .social-media i {
+    color: var(--icon-even);
+}

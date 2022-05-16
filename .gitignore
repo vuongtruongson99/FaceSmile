@@ -1,0 +1,3 @@
+config.py
+emotion_recognition_model/fer2013
+emotion_recognition_model/checkpoints

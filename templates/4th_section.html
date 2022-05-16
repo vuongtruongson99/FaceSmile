@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %} Face emotion recognition - Video {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/4th_section.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block section %}
+<div class="section-4 vh-100">
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="row">
+            <div class="col-12">
+                <h3>Наша команда</h3>
+            </div>     
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="card odd">
+                    <div class="profile-picture">
+                        <div class="elipse"></div>
+                        <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="info">
+                        <h4 class="name">Выонг Чыонг Шон</h5>
+                        <h5 class="position">Web Developer</h5>
+                        <p class="introduce">A kiddo who uses Flask in web development. Currently playing around with design via Figma</p>
+                    </div>
+
+                    <h6><span class="mail odd">abc1234@gmail.com</span></h6>
+
+                    <!-- <div class="social-media mb-5">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-vk fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                    </div> -->
+
+                    <!-- <img src="{{ url_for('static', filename='images/Rectangle-card.png') }}" alt="" class="rectangle"> -->
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card even">
+                    <div class="profile-picture">
+                        <div class="elipse"></div>
+                        <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="info">
+                        <h4 class="name">Демченко Маргарита Николаевна</h5>
+                        <h5 class="position">Web Developer</h5>
+                        <p class="introduce">A kiddo who uses Flask in web development. Currently playing around with design via Figma</p>
+                    </div>
+
+                    <h6><span class="mail even">abc1234@gmail.com</span></h6>
+
+                    <!-- <div class="social-media mb-5">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-vk fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                    </div> -->
+
+                    <!-- <img src="{{ url_for('static', filename='images/Rectangle-card.png') }}" alt="" class="rectangle"> -->
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card odd">
+                    <div class="profile-picture">
+                        <div class="elipse"></div>
+                        <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="info">
+                        <h4 class="name">Бикзянтиев Рушан Ринатович</h5>
+                        <h5 class="position">Web Developer</h5>
+                        <p class="introduce">A kiddo who uses Flask in web development. Currently playing around with design via Figma</p>
+                    </div>
+
+                    <h6><span class="mail odd">abc1234@gmail.com</span></h6>
+
+                    <!-- <div class="social-media mb-5">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-vk fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                    </div> -->
+
+                    <!-- <img src="{{ url_for('static', filename='images/Rectangle-card.png') }}" alt="" class="rectangle"> -->
+                </div>
+            </div>
+
+            
+        </div>
+    </div>  
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/4th.js') }}"></script>
+{% endblock %}

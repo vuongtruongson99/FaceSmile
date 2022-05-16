@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block title %} Face emotion recognition - Image {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/3rd_section.css') }}">
+{% endblock %}
+
+{% block section %}
+<div class="section-3 vh-100">
+    <div class="container h-100">
+        <div class="row">
+            <div class="col-12 text-center">
+                {% for mess in get_flashed_messages()  %}
+                    <div class="alert alert-success" role="alert">
+                    {{mess}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+                <h3>Или вы можете загрузить фото ...!</h3>
+            </div>
+            
+        </div>
+
+        <div class="row video">
+            <div class="col-lg-8 col-sm-12 mb-5">
+                <p></p>
+                {% if filename %}
+                    <div style="padding: 20px; background-color: var(--bg-section); border-radius: 100px; margin-bottom: 10px;">
+                        <img style="width: 100%; border-radius: 100px" src="{{ url_for('display_image', filename=filename) }}">
+                    </div>
+                    <div class="buttons text-center">
+                        <a href="{{url_for('image')}}" class="main-btn">Загрузить новое фото</a>
+                    </div>
+                {% else %}
+                <form id="form" action="{{url_for('image')}}" method="post" enctype="multipart/form-data">
+                    <div class="drop-zone">
+                        <!-- <label for="choose_file"> -->
+                            <!-- onchange="this.form.submit();" -->
+                            <input type="file" name="file" id="choose_file" class="drop-zone__input">
+                            <p class="drop-zone__prompt"><span>Добавить файл</span> или перетащить файл сюда </p>
+                        <!-- </label> -->
+                    </div>
+                    <div class="buttons text-center">
+                        <button type="submit" class="main-btn">Загрузить фото</button>
+                    </div>                        
+                </form>
+                {% endif %}
+            </div>
+
+            <div class="col-lg-4 col-sm-12 predict-video"> 
+                <div class="row video">
+                    <h3>Эмоция</h3>
+                    <div class="col-lg-12 col-sm-6 item">
+                        <div class="emoji">
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/smile-icon.svg') }}" alt="">
+                        </div>
+                        <div class="status">
+                            <p>Нейтральный</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{percent['neutral']}}%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-6 item">
+                        <div class="emoji">
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/happy-icon.svg') }}" alt="">
+                        </div>
+                        <div class="status">
+                            <p>Счастлиый</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{percent['happy']}}%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-6 item">
+                        <div class="emoji">
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/sad-icon.svg') }}" alt="">
+                        </div>
+                        <div class="status">
+                            <p>Печальный</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{percent['sad']}}%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-6 item">
+                        <div class="emoji">
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/suprise-icon.svg') }}" alt="">
+                        </div>
+                        <div class="status">
+                            <p>Удивление</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{percent['supprised']}}%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-6 item">
+                        <div class="emoji">
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/fear-icon.svg') }}" alt="">
+                        </div>
+                        <div class="status">
+                            <p>Страх</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{percent['scared']}}%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-6 item">
+                        <div class="emoji">
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/angry-icon.svg') }}" alt="">
+                        </div>
+                        <div class="status">
+                            <p>Гнев</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{percent['angry']}}%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                </div>
+            </div>
+        
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/3rd.js') }}"></script>
+{% endblock %}

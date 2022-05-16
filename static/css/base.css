@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --body: rgba(1, 0, 105, 0.8);
+    --btn: rgba(119, 87, 241, 0.2);
+    --main-btn: #7757F1;
+    --bg-section: #ffff;
+    --bg-progress: #DBEAFF;
+    --bg-card-odd: #ffff;
+    --bg-card-even: rgba(167, 154, 224, 1);
+    --bg-mail-odd: rgba(38, 35, 92, 0.65);
+    --bg-mail-even: #221F81;
+    --icon-odd: #26235C;
+    --icon-even: #FFFF;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--body)
+}
+
+body.dark-mode {
+    --body: #FFFF;
+    --main-btn: rgba(255, 255, 255, 0.062);
+    --btn: rgba(238, 92, 223, 0.8);
+    --bg-section: rgba(255, 255, 255, 0.15);
+    --bg-progress: #DBEAFF;
+    --bg-card-odd: rgba(255, 255, 255, 0.15);
+    --bg-card-even: rgba(255, 255, 255, 0.15)F;
+    --bg-mail-odd: linear-gradient(100.35deg, #FFE300 -4.46%, #FA05A7 91.84%);
+    --bg-mail-even: linear-gradient(102.73deg, rgba(107, 254, 83, 0.65) 13.53%, rgba(0, 225, 242, 0.65) 92.07%);
+    --icon-odd: #FFFF;
+    --icon-even: #FFFF;
+}

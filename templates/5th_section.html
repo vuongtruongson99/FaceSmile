@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %} Face emotion recognition - Video {% endblock %}
+{% block style %}
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<link rel='stylesheet' href="{{ url_for('static', filename='css/jquery.fullPage.css') }}">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5th_section.css') }}">
+{% endblock %}
+
+{% block section %}
+<div id="fullpage">
+    
+    <div class="section " id="section0">
+        {% for mess in get_flashed_messages()  %}
+            <div class="alert alert-success" role="alert" style="position: relative; top: -80px;">
+            {{mess}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+        <h1 class="line-1 anim-typewriter">Привет! ☺</h1>
+        <p>Отправьте нам рукописное письмо по адресу:</p>
+        <p> tr.son.2112@gmail.com :)</p>
+        <div class="arrowDown bounce"></div>
+    </div>
+    <div class="section" id="section1">
+        <div class="intro">
+            <form action="/contact" method="post">
+                <div class="contactform" style="padding-top: 40px;">
+                    <div class="cfinner">
+                        <p class="line">
+                            <span class="copy">Уважаемый NeuroCap,</span>
+                        </p>
+                        <p class="line">
+                            <span class="copy">Меня зовут </span>
+                            <span class="inputcontainer"><input class="textinput" name="name" value=""
+                                    placeholder="введите свое имя " required></span>
+                            <span class="copy">и мой адрес электронной почты: </span>
+                            <span class="inputcontainer"><input class="textinput" name="email" value=""
+                                    placeholder="введите адрес почты" required></span>
+                            <span class="copy">.</span>
+                        </p>
+                        <p class="line">
+                            <span class="copy">Опишите вашу проблему&nbsp;<span class="word wisteria">обратная-связь</span><span
+                                    class="word belize">жаловаться</span><span class="word pomegranate">что-не-так:)</span>
+                            </span>
+                            <br />
+                            <span class="inputcontainer"><input class="longtextinput" name="content" value=""
+                                    placeholder="введите контент здесь " required></span>
+                            <span class="copy">.</span>
+                        </p>
+                        <p class="line">
+                            <button class="button">Отправить <i class="fa fa-paper-plane"></i></button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js'></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.fullPage.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/5th.js') }}"></script>
+{% endblock %}
